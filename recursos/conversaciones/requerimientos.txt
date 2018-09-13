@@ -1,0 +1,7 @@
+Fecha Inicio: 12/09/2018
+Fecha Maxima: 22/09/2018
+Fecha Fin:    ??/??/????
+
+Tecnologia: PHP + Sinfony
+Base de Datos: Mysql
+Tecnologia: Responsive
