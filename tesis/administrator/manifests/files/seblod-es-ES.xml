@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="file" method="upgrade" version="2.5">
+    <name>SEBLOD - es-ES</name>
+    <version>2018-09-16-05-19-07</version>
+    <creationDate>16.09.2018</creationDate>
+    <author>Pacoguio, 3DM, jorgemarinosanchez, Hertak, proserven, tecnologyuruguay, EliasAli68, marceloroggio, mperaya, vgcouso, rafaelvm, erickmines, poseidon_eml, digital03, kupiff, michelbg, r2d2Melville, lau_ibarra, luclic, JohnBurrows, JulioAbundis, llorencs, manyfeathers, dmalvarez</author>
+    <authorEmail>info@seblod.com</authorEmail>
+    <authorUrl>https://www.transifex.com/JoomlaTranslators/SeblodCCK/</authorUrl>
+    <copyright>2018 SEBLOD</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <packager>SEBLOD</packager>
+    <packagerurl>https://seblod.com</packagerurl>
+    <description>
+        SEBLOD CCK translation package
+    </description>
+    <fileset>
+        <files folder="admin" target="administrator/language/es-ES"><filename>es-ES.com_cck.ini</filename>
+<filename>es-ES.com_cck.sys.ini</filename>
+<filename>es-ES.com_cck_core.ini</filename>
+<filename>es-ES.mod_cck_menu.ini</filename>
+<filename>es-ES.mod_cck_menu.sys.ini</filename>
+<filename>es-ES.mod_cck_quickadd.ini</filename>
+<filename>es-ES.mod_cck_quickadd.sys.ini</filename>
+<filename>es-ES.mod_cck_quickicon.ini</filename>
+<filename>es-ES.mod_cck_quickicon.sys.ini</filename>
+<filename>es-ES.plg_cck_field_42.ini</filename>
+<filename>es-ES.plg_cck_field_42.sys.ini</filename>
+<filename>es-ES.plg_cck_field_button_free.ini</filename>
+<filename>es-ES.plg_cck_field_button_free.sys.ini</filename>
+<filename>es-ES.plg_cck_field_button_submit.ini</filename>
+<filename>es-ES.plg_cck_field_button_submit.sys.ini</filename>
+<filename>es-ES.plg_cck_field_calendar.ini</filename>
+<filename>es-ES.plg_cck_field_calendar.sys.ini</filename>
+<filename>es-ES.plg_cck_field_checkbox.ini</filename>
+<filename>es-ES.plg_cck_field_checkbox.sys.ini</filename>
+<filename>es-ES.plg_cck_field_colorpicker.ini</filename>
+<filename>es-ES.plg_cck_field_colorpicker.sys.ini</filename>
+<filename>es-ES.plg_cck_field_div.ini</filename>
+<filename>es-ES.plg_cck_field_div.sys.ini</filename>
+<filename>es-ES.plg_cck_field_email.ini</filename>
+<filename>es-ES.plg_cck_field_email.sys.ini</filename>
+<filename>es-ES.plg_cck_field_field_x.ini</filename>
+<filename>es-ES.plg_cck_field_field_x.sys.ini</filename>
+<filename>es-ES.plg_cck_field_freetext.ini</filename>
+<filename>es-ES.plg_cck_field_freetext.sys.ini</filename>
+<filename>es-ES.plg_cck_field_group.ini</filename>
+<filename>es-ES.plg_cck_field_group.sys.ini</filename>
+<filename>es-ES.plg_cck_field_group_x.ini</filename>
+<filename>es-ES.plg_cck_field_group_x.sys.ini</filename>
+<filename>es-ES.plg_cck_field_hidden.ini</filename>
+<filename>es-ES.plg_cck_field_hidden.sys.ini</filename>
+<filename>es-ES.plg_cck_field_icon.ini</filename>
+<filename>es-ES.plg_cck_field_icon.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_accesslevel.ini</filename>
+<filename>es-ES.plg_cck_field_jform_accesslevel.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_associations.ini</filename>
+<filename>es-ES.plg_cck_field_jform_associations.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_category.ini</filename>
+<filename>es-ES.plg_cck_field_jform_category.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_componentlayout.ini</filename>
+<filename>es-ES.plg_cck_field_jform_componentlayout.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_contentlanguage.ini</filename>
+<filename>es-ES.plg_cck_field_jform_contentlanguage.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_editors.ini</filename>
+<filename>es-ES.plg_cck_field_jform_editors.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_groupparent.ini</filename>
+<filename>es-ES.plg_cck_field_jform_groupparent.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_helpsite.ini</filename>
+<filename>es-ES.plg_cck_field_jform_helpsite.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_media.ini</filename>
+<filename>es-ES.plg_cck_field_jform_media.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_menuitem.ini</filename>
+<filename>es-ES.plg_cck_field_jform_menuitem.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_rules.ini</filename>
+<filename>es-ES.plg_cck_field_jform_rules.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_tag.ini</filename>
+<filename>es-ES.plg_cck_field_jform_tag.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_templatestyle.ini</filename>
+<filename>es-ES.plg_cck_field_jform_templatestyle.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_timezone.ini</filename>
+<filename>es-ES.plg_cck_field_jform_timezone.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_user.ini</filename>
+<filename>es-ES.plg_cck_field_jform_user.sys.ini</filename>
+<filename>es-ES.plg_cck_field_jform_usergroups.ini</filename>
+<filename>es-ES.plg_cck_field_jform_usergroups.sys.ini</filename>
+<filename>es-ES.plg_cck_field_joomla_module.ini</filename>
+<filename>es-ES.plg_cck_field_joomla_module.sys.ini</filename>
+<filename>es-ES.plg_cck_field_link.ini</filename>
+<filename>es-ES.plg_cck_field_link.sys.ini</filename>
+<filename>es-ES.plg_cck_field_link_cck_form.ini</filename>
+<filename>es-ES.plg_cck_field_link_cck_form.sys.ini</filename>
+<filename>es-ES.plg_cck_field_link_cck_list.ini</filename>
+<filename>es-ES.plg_cck_field_link_cck_list.sys.ini</filename>
+<filename>es-ES.plg_cck_field_link_content.ini</filename>
+<filename>es-ES.plg_cck_field_link_content.sys.ini</filename>
+<filename>es-ES.plg_cck_field_link_content_delete.ini</filename>
+<filename>es-ES.plg_cck_field_link_content_delete.sys.ini</filename>
+<filename>es-ES.plg_cck_field_live_joomla_user.ini</filename>
+<filename>es-ES.plg_cck_field_live_joomla_user.sys.ini</filename>
+<filename>es-ES.plg_cck_field_live_url_variable.ini</filename>
+<filename>es-ES.plg_cck_field_live_url_variable.sys.ini</filename>
+<filename>es-ES.plg_cck_field_password.ini</filename>
+<filename>es-ES.plg_cck_field_password.sys.ini</filename>
+<filename>es-ES.plg_cck_field_radio.ini</filename>
+<filename>es-ES.plg_cck_field_radio.sys.ini</filename>
+<filename>es-ES.plg_cck_field_restriction_cck_workflow.ini</filename>
+<filename>es-ES.plg_cck_field_restriction_cck_workflow.sys.ini</filename>
+<filename>es-ES.plg_cck_field_restriction_url_variable.ini</filename>
+<filename>es-ES.plg_cck_field_restriction_url_variable.sys.ini</filename>
+<filename>es-ES.plg_cck_field_search_generic.ini</filename>
+<filename>es-ES.plg_cck_field_search_generic.sys.ini</filename>
+<filename>es-ES.plg_cck_field_search_ordering.ini</filename>
+<filename>es-ES.plg_cck_field_search_ordering.sys.ini</filename>
+<filename>es-ES.plg_cck_field_select_dynamic.ini</filename>
+<filename>es-ES.plg_cck_field_select_dynamic.sys.ini</filename>
+<filename>es-ES.plg_cck_field_select_multiple.ini</filename>
+<filename>es-ES.plg_cck_field_select_multiple.sys.ini</filename>
+<filename>es-ES.plg_cck_field_select_numeric.ini</filename>
+<filename>es-ES.plg_cck_field_select_numeric.sys.ini</filename>
+<filename>es-ES.plg_cck_field_select_simple.ini</filename>
+<filename>es-ES.plg_cck_field_select_simple.sys.ini</filename>
+<filename>es-ES.plg_cck_field_storage.ini</filename>
+<filename>es-ES.plg_cck_field_storage.sys.ini</filename>
+<filename>es-ES.plg_cck_field_tabs.ini</filename>
+<filename>es-ES.plg_cck_field_tabs.sys.ini</filename>
+<filename>es-ES.plg_cck_field_text.ini</filename>
+<filename>es-ES.plg_cck_field_text.sys.ini</filename>
+<filename>es-ES.plg_cck_field_textarea.ini</filename>
+<filename>es-ES.plg_cck_field_textarea.sys.ini</filename>
+<filename>es-ES.plg_cck_field_typo_bold.ini</filename>
+<filename>es-ES.plg_cck_field_typo_bold.sys.ini</filename>
+<filename>es-ES.plg_cck_field_typo_clear.ini</filename>
+<filename>es-ES.plg_cck_field_typo_clear.sys.ini</filename>
+<filename>es-ES.plg_cck_field_typo_date.ini</filename>
+<filename>es-ES.plg_cck_field_typo_date.sys.ini</filename>
+<filename>es-ES.plg_cck_field_typo_heading.ini</filename>
+<filename>es-ES.plg_cck_field_typo_heading.sys.ini</filename>
+<filename>es-ES.plg_cck_field_typo_html.ini</filename>
+<filename>es-ES.plg_cck_field_typo_html.sys.ini</filename>
+<filename>es-ES.plg_cck_field_typo_image.ini</filename>
+<filename>es-ES.plg_cck_field_typo_image.sys.ini</filename>
+<filename>es-ES.plg_cck_field_typo_italic.ini</filename>
+<filename>es-ES.plg_cck_field_typo_italic.sys.ini</filename>
+<filename>es-ES.plg_cck_field_typo_joomla_jgrid.ini</filename>
+<filename>es-ES.plg_cck_field_typo_joomla_jgrid.sys.ini</filename>
+<filename>es-ES.plg_cck_field_typo_underline.ini</filename>
+<filename>es-ES.plg_cck_field_typo_underline.sys.ini</filename>
+<filename>es-ES.plg_cck_field_upload_file.ini</filename>
+<filename>es-ES.plg_cck_field_upload_file.sys.ini</filename>
+<filename>es-ES.plg_cck_field_upload_image.ini</filename>
+<filename>es-ES.plg_cck_field_upload_image.sys.ini</filename>
+<filename>es-ES.plg_cck_field_validation_ajax_availability.ini</filename>
+<filename>es-ES.plg_cck_field_validation_ajax_availability.sys.ini</filename>
+<filename>es-ES.plg_cck_field_validation_confirm.ini</filename>
+<filename>es-ES.plg_cck_field_validation_confirm.sys.ini</filename>
+<filename>es-ES.plg_cck_field_validation_email.ini</filename>
+<filename>es-ES.plg_cck_field_validation_email.sys.ini</filename>
+<filename>es-ES.plg_cck_field_validation_letter_number_only.ini</filename>
+<filename>es-ES.plg_cck_field_validation_letter_number_only.sys.ini</filename>
+<filename>es-ES.plg_cck_field_validation_required.ini</filename>
+<filename>es-ES.plg_cck_field_validation_required.sys.ini</filename>
+<filename>es-ES.plg_cck_field_validation_url.ini</filename>
+<filename>es-ES.plg_cck_field_validation_url.sys.ini</filename>
+<filename>es-ES.plg_cck_field_wysiwyg_editor.ini</filename>
+<filename>es-ES.plg_cck_field_wysiwyg_editor.sys.ini</filename>
+<filename>es-ES.plg_cck_storage_custom.ini</filename>
+<filename>es-ES.plg_cck_storage_custom.sys.ini</filename>
+<filename>es-ES.plg_cck_storage_json.ini</filename>
+<filename>es-ES.plg_cck_storage_json.sys.ini</filename>
+<filename>es-ES.plg_cck_storage_location_free.ini</filename>
+<filename>es-ES.plg_cck_storage_location_free.sys.ini</filename>
+<filename>es-ES.plg_cck_storage_location_joomla_article.ini</filename>
+<filename>es-ES.plg_cck_storage_location_joomla_article.sys.ini</filename>
+<filename>es-ES.plg_cck_storage_location_joomla_category.ini</filename>
+<filename>es-ES.plg_cck_storage_location_joomla_category.sys.ini</filename>
+<filename>es-ES.plg_cck_storage_location_joomla_user.ini</filename>
+<filename>es-ES.plg_cck_storage_location_joomla_user.sys.ini</filename>
+<filename>es-ES.plg_cck_storage_location_joomla_user_group.ini</filename>
+<filename>es-ES.plg_cck_storage_location_joomla_user_group.sys.ini</filename>
+<filename>es-ES.plg_cck_storage_standard.ini</filename>
+<filename>es-ES.plg_cck_storage_standard.sys.ini</filename></files>
+        <files folder="frontend" target="language/es-ES"><filename>es-ES.com_cck.ini</filename>
+<filename>es-ES.com_cck_default.ini</filename>
+<filename>es-ES.files_var_cck_joomla.sys.ini</filename>
+<filename>es-ES.files_var_cck_seb_css3.sys.ini</filename>
+<filename>es-ES.lib_cck.ini</filename>
+<filename>es-ES.lib_cck.sys.ini</filename>
+<filename>es-ES.mod_cck_breadcrumbs.ini</filename>
+<filename>es-ES.mod_cck_breadcrumbs.sys.ini</filename>
+<filename>es-ES.mod_cck_form.ini</filename>
+<filename>es-ES.mod_cck_form.sys.ini</filename>
+<filename>es-ES.mod_cck_list.ini</filename>
+<filename>es-ES.mod_cck_list.sys.ini</filename>
+<filename>es-ES.mod_cck_search.ini</filename>
+<filename>es-ES.mod_cck_search.sys.ini</filename>
+<filename>es-ES.pkg_app_cck_joomla_article.ini</filename>
+<filename>es-ES.pkg_app_cck_joomla_category.ini</filename>
+<filename>es-ES.pkg_app_cck_joomla_user.ini</filename>
+<filename>es-ES.pkg_app_cck_joomla_user_group.ini</filename>
+<filename>es-ES.tpl_seb_blog.ini</filename>
+<filename>es-ES.tpl_seb_one.ini</filename>
+<filename>es-ES.tpl_seb_table.ini</filename></files>
+    </fileset>
+</extension>
