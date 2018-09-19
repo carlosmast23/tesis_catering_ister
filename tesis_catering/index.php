@@ -4,6 +4,7 @@ include("cliente.php");
 include("evento.php");
 include("producto.php");
 include("personal.php");
+include("pedido.php");
 
     $conexion = new ConexionDB('localhost', 'root', '', 'tesis');
     $mysqli = $conexion->getConexion();
@@ -21,7 +22,7 @@ if(isset($_POST["btnCliente"]))
 }
 if(isset($_POST["btnEvento"]))
 {
-    $cliente = new CLiente("","","","","","");
+    $cliente = new Cliente("","","","","","");
     $query = $cliente->ultimoRegistro();
     $resultado = $mysqli->query($query);
     if(mysqli_num_rows($resultado)>0){
@@ -34,6 +35,8 @@ if(isset($_POST["btnEvento"]))
     $query = $evento->guardar($id);
     $mysqli->query($query);
     $conexion->cerrarConexion();
+    header("location:pedidoLista.php");
+
 }
 if(isset($_POST["btnProducto"]))
 {
@@ -51,6 +54,29 @@ if(isset($_POST["btnPersonal"]))
     $mysqli->query($query);
     $conexion->cerrarConexion();
     header("location:personalLista.php");
+}
+if(isset($_POST["btnPedido"]))
+{
+    //evento producto y personal
+    $dateTime1 = new DateTime($_POST['fecha_pedido']);
+    $fechaHora1 = $dateTime1->format('d/m/Y');
+    $dateTime2 = new DateTime($_POST['fecha_entrega']);
+    $fechaHora2 = $dateTime2->format('d/m/Y');
+    $pedido = new Pedido($_POST['codigo'], $_POST['estado'],$fechaHora1, $fechaHora2);
+
+    $evento = new Evento("","","","","");
+    $query = $evento->ultimoRegistro();
+    $resultado = $mysqli->query($query);
+    if(mysqli_num_rows($resultado)>0){
+        $fila = $resultado->fetch_array(MYSQLI_ASSOC);
+        $idEvento = $fila['id_evento'];
+    }
+
+    $query = $pedido->guardar($idEvento,$_POST['Id_producto'],$_POST['id_personal']);
+    echo $query;
+    $mysqli->query($query);
+    $conexion->cerrarConexion();
+    header("location:pedidoLista.php");
 }
 
 

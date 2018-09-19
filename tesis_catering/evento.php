@@ -61,6 +61,12 @@
             return $query;
         }
 
+        public function ultimoRegistro()
+        {
+           $query = "SELECT id_evento from evento  order by id_evento desc limit 1";
+           return $query;
+        }
+
 
         
         

@@ -72,7 +72,7 @@
 
         public function todos()
         {
-           $query = "SELECT cedula,nombre,apellido,sexo from personal";
+           $query = "SELECT id_personal,cedula,nombre,apellido,sexo from personal";
            return $query;
         }
         

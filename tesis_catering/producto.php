@@ -82,7 +82,7 @@
 
         public function todos()
         {
-           $query = "SELECT codigo,nombre,precio from producto";
+           $query = "SELECT Id_producto,codigo,nombre,precio from producto";
            return $query;
         }
         
