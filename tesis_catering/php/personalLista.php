@@ -28,29 +28,21 @@
         <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Servicio de Catering</a>
+            <a class="navbar-brand js-scroll-trigger" href="../index.html">Servicio de Catering</a>
             <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Acerca de Nosotros</a>
-                </li>
-                <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Servicios</a>
-                </li>
-                <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contactanos</a>
-                </li>
+                
             </ul>
             </div>
         </div>
     </nav>
     <?php
         include("conexion.php");
-        include("producto.php");
+        include("personal.php");
         $conexion = new ConexionDB('localhost', 'root', '', 'tesis');
         $mysqli = $conexion->getConexion();
     ?>  
@@ -61,26 +53,28 @@
                 <div class="col-8">
                 </div>  
                 <div class="col-2">
-                    <a class="btn mt-2 mb-3 btn-outline-dark" href="producto.html">
-                        <i class="fas fa-plus-square mr-2"></i>Producto
+                    <a class="btn mt-2 mb-3 btn-outline-dark" href="personal.html">
+                        <i class="fas fa-plus-square mr-2"></i>Personal
                     </a> 
                 </div>  
             </div>
+
             <div class="row">
                 <div class="col-8 offset-2">
-                    <h3>Producto</h3>
+                    <h3>Personal</h3>
                     <table class="table">
                         <thead>
                             <tr>
-                            <th scope="col">Codigo</th>
+                            <th scope="col">Cedula</th>
                             <th scope="col">Nombre</th>
-                            <th scope="col">Precio</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Sexo</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                                $producto = new Producto("","","","","","");
-                                $query = $producto->todos();
+                                $personal = new Personal("","","","","","");
+                                $query = $personal->todos();
                                 $resultados = $mysqli->query($query);
                                 if ($resultados->num_rows > 0) 
                                 {
@@ -88,9 +82,10 @@
                                     {
                             ?>
                                         <tr>
-                                            <td><?php echo $fila['codigo']; ?></td>    
+                                            <td><?php echo $fila['cedula']; ?></td>    
                                             <td><?php echo $fila['nombre']; ?></td>
-                                            <td><?php echo $fila['precio']; ?></td>
+                                            <td><?php echo $fila['apellido']; ?></td>
+                                            <td><?php echo $fila['sexo']; ?></td>
                                         </tr>
                             <?php
                                     }

@@ -28,21 +28,22 @@
         $pdf = new FPDF();
         $pdf->AddPage();
         //$pdf->SetFont('Arial','B',16);
+        $pdf->Image('../img/profile4.png',10,8,-300);
         $pdf->SetFont('Arial','',16);
         if ($resultados->num_rows > 0) 
         {
             while($fila = $resultados->fetch_assoc()) 
             {
                 $pdf->SetFont('Arial','B',16);
-                $pdf->SetXY(10, 10);$pdf->Cell(25,10,'Evento:',0,0,'L');
+                $pdf->SetXY(40, 10);$pdf->Cell(25,10,'Evento:',0,0,'L');
                 $pdf->SetFont('Arial','',14);
                 $pdf->Cell(30,10, $fila['nombreEvento']);
                 $pdf->SetFont('Arial','B',16);
-                $pdf->SetXY(10, 11);$pdf->Cell(25,20,'Ciudad:');
+                $pdf->SetXY(40, 11);$pdf->Cell(25,20,'Ciudad:');
                 $pdf->SetFont('Arial','',14);
                 $pdf->Cell(30,20, $fila['ciudadEvento']);
                 $pdf->SetFont('Arial','B',16);
-                $pdf->SetXY(10, 22);$pdf->Cell(25,10,'Cliente:',0,0,'L');
+                $pdf->SetXY(40, 22);$pdf->Cell(25,10,'Cliente:',0,0,'L');
                 $pdf->SetFont('Arial','',14);
                 $pdf->Cell(30,10, $fila['nombreCliente']." ".$fila['apellidoCliente']." - ".$fila['cedulaCliente']);
                 break;
@@ -59,18 +60,18 @@
         if ($resultados->num_rows > 0) 
         {
             $pdf->SetFont('Arial','B',16);
-            $pdf->SetXY(10, 50); $pdf->Cell(25,10,'Pedido',0,0,'L'); $pdf->Cell(45,10,'Producto',0,0,'L'); $pdf->Cell(25,10,'Precio',0,0,'L'); $pdf->Cell(50,10,'Empleado',0,0,'L'); $pdf->Cell(25,10,'Cedula',0,0,'L');
+            $pdf->SetXY(10, 50); $pdf->Cell(30,10,'Pedido',0,0,'L'); $pdf->Cell(45,10,'Producto',0,0,'L'); $pdf->Cell(25,10,'Precio',0,0,'L'); $pdf->Cell(50,10,'Empleado',0,0,'L'); $pdf->Cell(25,10,'Cedula',0,0,'L');
             $c = 50;
             $suma = 0;
             while($fila = $resultados->fetch_assoc()) 
             {
                 $pdf->SetFont('Arial','',12);
-                $pdf->SetXY(10, $c+=10); $pdf->Cell(25,10,$fila['pedidoCodigo'],0,0,'L'); $pdf->Cell(45,10,$fila['nombreProducto'],0,0,'L'); $pdf->Cell(25,10,$fila['precioProducto'],0,0,'L'); $pdf->Cell(50,10,$fila['nombrePersonal']." ".$fila['apellidoPersonal'],0,0,'L'); $pdf->Cell(25,10,$fila['cedulaPersonal'],0,0,'L');
+                $pdf->SetXY(10, $c+=10); $pdf->Cell(30,10,$fila['pedidoCodigo'],0,0,'L'); $pdf->Cell(45,10,$fila['nombreProducto'],0,0,'L'); $pdf->Cell(25,10,$fila['precioProducto'],0,0,'L'); $pdf->Cell(50,10,$fila['nombrePersonal']." ".$fila['apellidoPersonal'],0,0,'L'); $pdf->Cell(25,10,$fila['cedulaPersonal'],0,0,'L');
                 $suma += $fila['precioProducto'];
             }
 
             $pdf->SetFont('Arial','B',12);
-            $pdf->SetXY(140, $c+=10);$pdf->Cell(25,10,'TOTAL: ',0,0,'L');
+            $pdf->SetXY(155, $c+=10);$pdf->Cell(25,10,'TOTAL: ',0,0,'L');
             $pdf->SetFont('Arial','',12);
             $pdf->Cell(45,10,$suma,0,0,'L'); 
 

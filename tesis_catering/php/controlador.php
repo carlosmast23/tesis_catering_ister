@@ -18,7 +18,7 @@ if(isset($_POST["btnCliente"]))
     $query = $cliente->guardar();
     $mysqli->query($query);
     $conexion->cerrarConexion();
-    header("location:evento.html");
+    header("location:../evento.html");
 }
 if(isset($_POST["btnEvento"]))
 {
