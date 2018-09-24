@@ -1,20 +1,31 @@
 <?php
     class Personal{
+
+        private $id_cargo;
         private $cedula;
         private $nombre;
         private $apellido;
         private $telefono;
         private $direccion;
         private $sexo;
+        private $nick;
+        private $clave;
 
-        function __construct($cedula, $nombre, $apellido, $telefono, $direccion, $sexo)
+        function __construct($id_cargo,$cedula, $nombre, $apellido, $telefono, $direccion, $sexo, $nick, $clave)
         {
+            $this->id_cargo = $id_cargo;
             $this->cedula = $cedula;
             $this->nombre = $nombre;
             $this->apellido = $apellido;
             $this->telefono = $telefono;
             $this->direccion = $direccion;
-            $this->sexo = $sexo;		
+            $this->sexo = $sexo;
+            $this->nick = $nick;
+            $this->clave = $clave;            		
+        }
+
+        public function getIdCargo(){
+            return $this->id_cargo;
         }
 
         public function getNombre(){
@@ -65,15 +76,34 @@
             $this->sexo = $sexo;
         }
 
+        public function getNick(){
+            return $this->nick;
+        }
+
+        public function getClave(){
+            return $this->clave;
+        }
+
         public function guardar(){
-            $query = "INSERT INTO personal(cedula,nombre,apellido,telefono,direccion,sexo) VALUES ('".$this->getCedula()."', '".$this->getNombre()."','".$this->getApellido()."', '".$this->getTelefono()."','".$this->getDireccion()."','".$this->getSexo()."')";
+            if(!($nick=="")){
+                $query = "INSERT INTO personal(cedula,nombre,apellido,telefono,direccion,sexo) VALUES ('".$this->getCedula()."', '".$this->getNombre()."','".$this->getApellido()."', '".$this->getTelefono()."','".$this->getDireccion()."','".$this->getSexo()."')";
+            }else{
+                $query = "INSERT INTO personal(cedula,nombre,apellido,telefono,direccion,sexo,nick,clave) VALUES ('".$this->getCedula()."', '".$this->getNombre()."','".$this->getApellido()."', '".$this->getTelefono()."','".$this->getDireccion()."','".$this->getSexo()."','".$this->getNick()."','".$this->getClave()."')";                
+            }
+            
             return $query;
         }
 
         public function todos()
         {
-           $query = "SELECT id_personal,cedula,nombre,apellido,sexo from personal";
+           $query = "SELECT id_personal,cedula,nombre,apellido,sexo,nick from personal";
            return $query;
+        }
+
+        public function verificarCedula($cedula)
+        {
+            $query = "SELECT cedula from personal WHERE cedula = '".$cedula."'";
+            return $query;  
         }
         
     }

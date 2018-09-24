@@ -67,8 +67,12 @@
            return $query;
         }
 
-
-        
+        public function verificarHorarios($datetime)
+        {
+            $query = "SELECT id_evento from evento WHERE fecha_hora = '".$datetime."'";
+            return $query;  
+        }
+     
         
     }
 ?>

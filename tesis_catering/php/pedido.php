@@ -11,9 +11,6 @@
 
         function __construct($codigo, $estado, $fecha_pedido, $fecha_entrega)
         {
-            //$this->id_evento = $id_evento;
-            //$this->Id_producto = $Id_producto;
-            //$this->id_personal = $id_personal;
             $this->codigo = $codigo;
             $this->estado = $estado;
             $this->fecha_pedido = $fecha_pedido;
@@ -47,7 +44,7 @@
 
         public function todos($id)
         {
-           $query = "SELECT codigo,estado from pedido where id_evento = '".$id."'";
+           $query = "SELECT codigo,estado,fecha_pedido from pedido where id_evento = '".$id."' order by fecha_pedido desc ";
            return $query;
         }
 

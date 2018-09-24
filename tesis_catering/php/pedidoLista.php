@@ -18,7 +18,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
         <!-- Plugin CSS -->
-        <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+        <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
 
         <!-- Custom styles for this template -->
         <link href="../css/freelancer.min.css" rel="stylesheet">
@@ -28,7 +28,10 @@
         <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="../index.html">Servicio de Catering</a>
+            <a class="navbar-brand js-scroll-trigger" href="../index.php">
+                <img src="../img/profile4.png" width="40" height="40" class="d-inline-block align-top" alt="">
+                Valle_Eventos
+            </a>
             <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars"></i>
@@ -46,7 +49,7 @@
         include("pedido.php");
         include("producto.php");
         include("personal.php");
-        $conexion = new ConexionDB('localhost', 'root', '', 'tesis');
+        $conexion = new ConexionDB();
         $mysqli = $conexion->getConexion();
     ?>  
     <!-- Header -->
@@ -69,11 +72,11 @@
                         </div>
                         <div class="form-group text-left">
                             <label for="fecha_pedido">Fecha y hora pedido:</label>
-                            <input type="datetime" class="form-control" name="fecha_pedido" placeholder="Ingrese fecha y hora pedido" required>
+                            <input type="datetime-local" class="form-control" name="fecha_pedido" placeholder="Ingrese fecha y hora pedido" required>
                         </div>
                         <div class="form-group text-left">
                             <label for="fecha_entrega">Fecha y hora entrega:</label>
-                            <input type="datetime" class="form-control" name="fecha_entrega" placeholder="Ingrese fecha y hora entrega" required>
+                            <input type="datetime-local" class="form-control" name="fecha_entrega" placeholder="Ingrese fecha y hora entrega" required>
                         </div>
                         <div class="form-group text-left">
                             <label for="Id_producto">Producto:</label>
@@ -87,12 +90,12 @@
                                         while($fila = $resultados->fetch_assoc()) 
                                         {
                                 ?>
-                                    <option value = "<?php echo $fila['Id_producto']; ?>"><?php echo $fila['nombre']; ?></option>
+                                            <option value = "<?php echo $fila['Id_producto']; ?>"><?php echo $fila['nombre']; ?></option>
                                 <?php
+                                        }
+                                    } else {
+                                        echo "0 results";
                                     }
-                                } else {
-                                    echo "0 results";
-                                }
                                 ?>                
                             </select>
                         </div>
@@ -100,7 +103,7 @@
                             <label for="id_personal">Personal:</label>
                             <select class="form-control" id="id_personal" name="id_personal">
                                 <?php
-                                    $personal = new Personal("","","","","","");                             
+                                    $personal = new Personal("","","","","","","","","");                             
                                     $query = $personal->todos();
                                     $resultados = $mysqli->query($query);
                                     if ($resultados->num_rows > 0) 
@@ -118,6 +121,7 @@
                             </select>
                         </div>
                         <div class="form-group text-right">
+                            <a href="../index.php" class="btn btn-danger" role="button" aria-pressed="true">Salir</a> 
                             <input id="btnPedido" class="btn btn-secondary" name="btnPedido" type="submit" value="Guardar"/>
                         </div>
                     </form>
@@ -132,6 +136,7 @@
                             <tr>
                             <th scope="col">Codigo</th>
                             <th scope="col">Estado</th>
+                            <th scope="col">Fecha Pedido</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -156,6 +161,7 @@
                                         <tr>
                                             <td><?php echo $fila['codigo']; ?></td>    
                                             <td><?php echo $fila['estado']; ?></td>
+                                            <td><?php echo $fila['fecha_pedido']; ?></td>
                                         </tr>
                             <?php
                                     }

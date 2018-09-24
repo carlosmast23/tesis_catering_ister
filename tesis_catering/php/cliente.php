@@ -75,6 +75,12 @@
            $query = "SELECT id_cliente from cliente  order by id_cliente desc limit 1";
            return $query;
         }
+
+        public function verificarCedula($cedula)
+        {
+            $query = "SELECT cedula from cliente WHERE cedula = '".$cedula."'";
+            return $query;  
+        }
         
     }
 ?>

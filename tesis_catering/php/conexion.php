@@ -1,18 +1,14 @@
 <?php
     class ConexionDB{
-        
-        private $host;
-        private $usuario;
-        private $clave;
-        private $db;
+
+        private $host = 'zonalinux.com';
+        private $usuario = 'c9grupo1';
+        private $clave= 'Ister*2018';
+        private $db= 'c9grupo1';
         private $conexion;
 
-        public function __construct($host, $usuario, $clave, $db)
+        public function __construct()
         {
-            $this->host = $host;
-            $this->usuario = $usuario;
-            $this->clave = $clave;
-            $this->db = $db;
             $this->generarConexion();
 
         }
@@ -23,6 +19,7 @@
             * Verificar si la conexión se establecio
             */
             if ($this->conexion->connect_error) {
+                echo "Sin conexion";
                 die('Error de Conexión (' . $conn->connect_errno . ') '
                         . $conn->connect_error);
             }

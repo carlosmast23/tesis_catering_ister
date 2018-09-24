@@ -3,7 +3,7 @@
     include("conexion.php");
     include("evento.php");
     
-        $conexion = new ConexionDB('localhost', 'root', '', 'tesis');
+        $conexion = new ConexionDB();
         $mysqli = $conexion->getConexion();
 
         $evento = new Evento("","","","","");
